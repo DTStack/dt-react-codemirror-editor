@@ -1,8 +1,8 @@
 # dt-react-codemirror-editor
 
-CodeMirror React.js 版本，自带一种自定义的日志模式 `dtlog`, 具体可以查看下面的使用示例。
+The CodeMirror for React.js. this version includes a customized `dtlog` language, if you need you can use it directly.
 
-## 安装
+## Install
 
 ### npm
 
