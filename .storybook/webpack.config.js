@@ -6,12 +6,9 @@ module.exports = async ({ config, mode }) => {
         loader: require.resolve('babel-loader'),
         options: {
             presets: [['react-app', { flow: false, typescript: true }]],
-            plugins: [
-                ['import', { libraryName: "antd", style: true }]
-            ]
         }
     }, {
-        test: /\.stories\.(ts|tsx)$/,
+        test: /\.stories\.(j|t)sx?$/,
         loaders: [require.resolve('@storybook/addon-storysource/loader')],
         enforce: 'pre',
     }, {

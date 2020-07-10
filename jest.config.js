@@ -1,4 +1,3 @@
-
 module.exports = {
     name: 'storybook-ts-boilerplate',
     globals: {

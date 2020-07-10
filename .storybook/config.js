@@ -6,7 +6,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { withOptions } from '@storybook/addon-options';
 import chaptersAddon from 'react-storybook-addon-chapters';
-import { repository, version } from "../package.json"
+import { name, repository, version } from "../package.json"
 setAddon(chaptersAddon);
 addDecorator(withNotes);
 addDecorator(withKnobs);
@@ -40,7 +40,7 @@ addParameters({
 });
 
 addDecorator(withOptions({
-    name: `组件库 v${version}`,
+    name: `${name} v${version}`,
     url: repository,
     sidebarAnimations: true,
 }))
@@ -48,7 +48,7 @@ addDecorator(withOptions({
  * 动态加载所有stories
  */
 function loadStories() {
-    const req = requireContext('../src/stories', true, /\.stories\.(ts|tsx)$/);
+    const req = requireContext('../src/stories', true, /\.stories\.(j|t)sx?$/);
     const allExport = [require('../src/stories/index.stories')]; // 第一排序
     req.keys().forEach(fileName => allExport.push(req(fileName)));
     return allExport;
