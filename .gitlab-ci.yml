@@ -1,22 +1,20 @@
 # Read more: https://docs.gitlab.com/12.7/ee/ci/yaml/README.html
+
 cache:
   paths:
    - node_modules/
+
+# 当 merge_requests, master, dev, test 分支时会执行依赖安装
+before_script:
+  - "npm install --unsafe-perm=true --allow-root"
+
 stages:
-  - install
   - lint
   - lintdoc
   - check-types
   - test
+  - build_deploy
 
-  # 当 merge_requests, master, dev, test 分支时会执行依赖安装
-install_dependencies: 
-  stage: install
-  script: 
-    - npm install --unsafe-perm=true --allow-root
-  only:
-    - merge_requests
-    - /master|(f|F)ix|(d|D)ev_|(f|F)eat|(i|I)ssue|ref|perf|next|test_/
 # 当 merge_requests 执行 eslint 检查
 code_quality: 
   stage: lint
@@ -24,7 +22,7 @@ code_quality:
     - npm run lint
   only:
     - merge_requests
-    - /(f|F)ix|(d|D)ev_|(f|F)eat|(i|I)ssue|ref|perf|next/
+
 # 当 merge_requests 执行 tsc 类型检查
 check_types:
   stage: check-types
@@ -32,7 +30,7 @@ check_types:
     - npm run check-types
   only:
     - merge_requests
-    - /(f|F)ix|(d|D)ev_|(f|F)eat|(i|I)ssue|ref|perf|next/
+
 # 当 merge_requests 有更时会执行单元测试任务
 test:
   stage: test
@@ -40,7 +38,7 @@ test:
     - npm run test
   only:
     - merge_requests
-    - /(f|F)ix|(d|D)ev_|(f|F)eat|(i|I)ssue|ref|perf|next/
+
 #执行 MD 文档校验， 为 doc 或者 master 命名当分支更新时才会触发
 doc_quality:
   stage: lintdoc
@@ -49,3 +47,10 @@ doc_quality:
   only:
     - /doc(s)|release/
     - master
+
+build_deploy: # Deploy master to Github Page
+  stage: build_deploy
+  script:
+    - npm run deploy-storybook
+  only:
+    - /master/
