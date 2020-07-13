@@ -116,6 +116,7 @@
     "react-test-renderer": "^16.8.6",
     "require-context.macro": "^1.1.0",
     "sass-loader": "^7.1.0",
+    "standard-version": "^8.0.1",
     "storybook-readme": "^5.0.5",
     "style-loader": "^0.23.1",
     "typescript": "^3.5.3",
