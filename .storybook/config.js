@@ -48,8 +48,8 @@ addDecorator(withOptions({
  * 动态加载所有stories
  */
 function loadStories() {
-    const req = requireContext('../src/stories', true, /\.stories\.(j|t)sx?$/);
-    const allExport = [require('../src/stories/index.stories')]; // 第一排序
+    const req = requireContext('../stories', true, /\.stories\.(j|t)sx?$/);
+    const allExport = [require('../stories/index.stories')]; // 第一排序
     req.keys().forEach(fileName => allExport.push(req(fileName)));
     return allExport;
 }

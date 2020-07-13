@@ -8,16 +8,18 @@ import './style.scss';
 import { notShowProps } from './utils';
 import { PropsTable } from './propsTable';
 
-import CodeMirrorEditor from '../codemirror';
+import CodeMirrorEditor from '../src/codemirror';
+import { defaultEditorOptions } from '../src/codemirror/config'
+import { createLinkMark, createLog, createTitle } from '../src/codemirror/utils';
+
 import propDefinitions from './editorPropsDefinition';
-import { defaultEditorOptions } from '../codemirror/config'
-import { createLinkMark, createLog, createTitle } from '../codemirror/utils';
+
+const changelogMd = require('../CHANGELOG.md');
+const readmeMd = require('../README.md');
 
 const defaultValue = `
 select * from test;
 `
-const changelogMd = require('../../CHANGELOG.md');
-const readmeMd = require('../../README.md');
 
 export const stories = storiesOf('CodeMirrorEditor', module);
 
