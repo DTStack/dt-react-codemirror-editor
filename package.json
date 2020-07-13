@@ -1,10 +1,10 @@
 {
   "name": "dt-react-codemirror-editor",
   "version": "0.9.0",
-  "description": "The codemirror editor for React.",
+  "description": "The CodeMirror editor for React.",
   "repository": {
     "type": "git",
-    "url": "http://gitlab.prod.dtstack.cn/dt-insight-front/infrastructure/storybook-ts-boilerplate.git"
+    "url": "https://github.com/DTStack/dt-react-codemirror-editor"
   },
   "main": "lib/index.js",
   "module": "lib/index.js",
