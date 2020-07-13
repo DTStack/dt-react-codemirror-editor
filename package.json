@@ -26,9 +26,9 @@
     "lint-fix": "npx eslint './src/**/*.tsx' --fix && lint-md ./*.md src/stories/markdown/*.md --fix"
   },
   "keywords": [
+    "codemirror",
     "react",
-    "storybook",
-    "boilerplate"
+    "storybook"
   ],
   "author": "Ziv",
   "license": "MIT",
