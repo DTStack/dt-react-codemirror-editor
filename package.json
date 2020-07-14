@@ -124,14 +124,12 @@
     "style-loader": "^0.23.1",
     "typescript": "^3.5.3",
     "url-loader": "^4.1.0",
-    "warning": "^4.0.3"
+    "warning": "^4.0.3",
+    "@types/codemirror": "^0.0.96",
+    "dt-react-component": "^1.2.0"
   },
   "dependencies": {
-    "@types/codemirror": "^0.0.96",
     "codemirror": "^5.55.0",
-    "dt-react-component": "^1.2.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-router": "^3.0.4"
+    "react": "^16.6.3"
   }
 }
