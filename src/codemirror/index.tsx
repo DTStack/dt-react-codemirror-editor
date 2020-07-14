@@ -8,7 +8,7 @@ import './languages/simpleLog';
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/addon/lint/lint.css'
 import 'codemirror/addon/scroll/simplescrollbars.css'
-import './style.scss'
+import './style'
 import { getLinkMark, getLogMark } from './utils'
 
 require('codemirror/mode/sql/sql')
