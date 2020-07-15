@@ -8,9 +8,9 @@ import './style.scss';
 import { notShowProps } from './utils';
 import { PropsTable } from './propsTable';
 
-import CodeMirrorEditor from '../src/codemirror';
-import { defaultEditorOptions } from '../src/codemirror/config'
-import { createLinkMark, createLog, createTitle } from '../src/codemirror/utils';
+import CodeMirrorEditor, { defaultEditorOptions, createLinkMark, createLog, createTitle } from '../lib';
+// import { defaultEditorOptions } from '../src/codemirror/config'
+// import { createLinkMark, createLog, createTitle } from '../src/codemirror/utils';
 
 import propDefinitions from './editorPropsDefinition';
 
