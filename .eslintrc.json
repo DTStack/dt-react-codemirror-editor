@@ -6,7 +6,7 @@
         "project": "./tsconfig.json"
     },
     "extends":[
-        "standard",
+        "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended"
     ],
@@ -70,6 +70,7 @@
                 "allowedNames": ["that"] // Allow `const self = this`; `[]` by default
             }
         ],
+        "@typescript-eslint/explicit-module-boundary-types": 0,
         "prefer-const": 0,
         "no-var": 0,
         "prefer-rest-params": 0
