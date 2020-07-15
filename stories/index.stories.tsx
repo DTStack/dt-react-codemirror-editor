@@ -8,10 +8,7 @@ import './style.scss';
 import { notShowProps } from './utils';
 import { PropsTable } from './propsTable';
 
-import CodeMirrorEditor, { defaultEditorOptions, createLinkMark, createLog, createTitle } from '../lib';
-// import { defaultEditorOptions } from '../src/codemirror/config'
-// import { createLinkMark, createLog, createTitle } from '../src/codemirror/utils';
-
+import CodeMirrorEditor, { createLinkMark, createLog, createTitle } from '../lib';
 import propDefinitions from './editorPropsDefinition';
 
 const changelogMd = require('../CHANGELOG.md');
@@ -87,9 +84,7 @@ ${createLinkMark({ href: 'http://www.google.com', download: '' })}
         text: `
         代码示例：
         ~~~js
-        import CodeMirrorEditor from 'dt-react-codemirror-editor';
-        import { defaultEditorOptions } from 'dt-react-codemirror-editor/config'
-        import { createLinkMark, createLog, createTitle } from 'dt-react-codemirror-editor/codemirror/utils';
+        import CodeMirrorEditor, { createLinkMark, createLog, createTitle } from 'dt-react-codemirror-editor';
         let log = \`
             \${createTitle('Log title')}
             \${createLog('info', 'info')}
@@ -119,7 +114,7 @@ stories.add('示例 - 事件监听', () => {
             </p>
             <CodeMirrorEditor 
                 value={`const language = 'javascript';`}
-                options={{ ...defaultEditorOptions, mode: 'javascript' }}
+                options={{ mode: 'javascript' }}
                 onChange={(prev, next, doc) => {
                     console.log('onChange,', prev, next, doc)
                 }}
