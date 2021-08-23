@@ -2,7 +2,7 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { MarkdownRender } from 'dt-react-component';
 
-import 'dt-react-component/lib/index.css'
+import '../lib/codemirror/style.css'
 
 import './style.scss';
 import { notShowProps } from './utils';
