@@ -1,6 +1,6 @@
 {
   "name": "dt-react-codemirror-editor",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "The CodeMirror editor for React.",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "./": "lib/"
   },
   "files": [
-    "lib"
+    "lib/**"
   ],
   "scripts": {
     "storybook": "npm run compile && start-storybook -p 9001 -c .storybook",

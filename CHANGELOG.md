@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.4](https://github.com/DTStack/dt-react-codemirror-editor/compare/v0.9.3...v0.9.4) (2021-08-24)
+
+
+### Bug Fixes
+
+* import the markdownRender style manually ([359f996](https://github.com/DTStack/dt-react-codemirror-editor/commit/359f9968c39948105d901aec2319b0b339b209f7))
+
 ### [0.9.3](https://github.com/DTStack/dt-react-codemirror-editor/compare/v0.9.2...v0.9.3) (2021-08-24)
 
 
