@@ -12,6 +12,9 @@
   "exports": {
     "./": "lib/"
   },
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "storybook": "npm run compile && start-storybook -p 9001 -c .storybook",
     "build-storybook": "build-storybook -c .storybook",
