@@ -2,13 +2,13 @@ import * as React from 'react';
 import { storiesOf } from '@storybook/react';
 import { MarkdownRender } from 'dt-react-component';
 
-import '../lib/codemirror/style.css'
-
 import './style.scss';
 import { notShowProps } from './utils';
 import { PropsTable } from './propsTable';
 
 import CodeMirrorEditor, { createLinkMark, createLog, createTitle } from '../lib';
+import '../lib/codemirror/style.css'
+
 import propDefinitions from './editorPropsDefinition';
 
 const changelogMd = require('../CHANGELOG.md');
@@ -51,6 +51,7 @@ stories.add('示例 - 基本使用', () => {
         代码示例：
         ~~~js
         import CodeMirrorEditor from 'dt-react-codemirror-editor';
+        import 'dt-react-codemirror-editor/lib/codemirror/style.css';
         <CodeMirrorEditor value={defaultValue} options={{ mode: 'sql' }}/>
         ~~~
         `,
@@ -85,6 +86,7 @@ ${createLinkMark({ href: 'http://www.google.com', download: '' })}
         代码示例：
         ~~~js
         import CodeMirrorEditor, { createLinkMark, createLog, createTitle } from 'dt-react-codemirror-editor';
+        import 'dt-react-codemirror-editor/lib/codemirror/style.css';
         let log = \`
             \${createTitle('Log title')}
             \${createLog('info', 'info')}
@@ -140,6 +142,7 @@ stories.add('示例 - 事件监听', () => {
         代码示例：
         ~~~js
         import CodeMirrorEditor from 'dt-react-codemirror-editor';
+        import 'dt-react-codemirror-editor/lib/codemirror/style.css';
         <CodeMirrorEditor 
             value={'const language = 'javascript';'}
             options={{ mode: 'javascript' }}
